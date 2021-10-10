@@ -3,10 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/AllMatch"
-    tools:context="com.mak.navigationarchitecturedemo.ui.onboarding.screens.ThirdScreen">
+    tools:context="com.mak.navigationarchitecturedemo.ui.onboarding.screens.FirstScreen">
+
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageView"
         android:layout_width="@dimen/logo_size"
         android:layout_height="@dimen/logo_size"
         android:layout_marginTop="@dimen/dp_150"
@@ -14,18 +15,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/easy_payment" />
+        app:srcCompat="@drawable/location_permission" />
 
     <TextView
-        android:id="@+id/title3"
+        android:id="@+id/title"
         style="@style/AllWrap"
         android:layout_marginTop="@dimen/dp_50"
-        android:text="@string/payment"
+        android:text="@string/location_access"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
         android:layout_width="0dp"
@@ -35,20 +36,29 @@
         android:layout_marginEnd="@dimen/dp_50"
         android:layout_marginBottom="@dimen/dp_20"
         android:gravity="center"
-        android:text="@string/lorem"
+        android:text="@string/location_permission_info_msg"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toTopOf="@id/btn_next"
+        app:layout_constraintBottom_toTopOf="@id/btn_finish"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title3" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_next"
+        android:id="@+id/btn_finish"
         style="@style/ButtonStyle"
         android:layout_marginEnd="@dimen/dp_40"
         android:layout_marginBottom="@dimen/dp_20"
-        android:text="@string/next"
+        android:text="@string/finish"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_grant"
+        style="@style/ButtonStyle"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:text="@string/grant_access"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
