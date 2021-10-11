@@ -8,5 +8,11 @@
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</string>
     <string name="next">Next</string>
     <string name="finish">Finish</string>
+    <string name="storage_access">Storage Access</string>
+    <string name="grant_access">Grant Access</string>
+    <string name="storage_permission_info_msg">Please grant us to access your storage. Which will help you to access features of app easily.</string>
+    <string name="location_access">Location Access</string>
+    <string name="location_permission_info_msg">Please grant us to access your current location. Which will help us to access your near by restaurants.</string>
+
 
 </resources>
