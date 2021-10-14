@@ -13,6 +13,10 @@
     <string name="storage_permission_info_msg">Please grant us to access your storage. Which will help you to access features of app easily.</string>
     <string name="location_access">Location Access</string>
     <string name="location_permission_info_msg">Please grant us to access your current location. Which will help us to access your near by restaurants.</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="signin">Signin</string>
+    <string name="signup">Signup</string>
 
 
 </resources>

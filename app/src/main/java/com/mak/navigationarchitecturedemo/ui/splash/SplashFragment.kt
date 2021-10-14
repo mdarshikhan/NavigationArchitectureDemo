@@ -32,8 +32,12 @@ class SplashFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            if (onBoardingFinished()) {
+            if (onBoardingFinished() && onSigninFinished() && onPermissionFinished()) {
                 findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
+            } else if (onBoardingFinished() && !onSigninFinished()) {
+                findNavController().navigate(R.id.action_splashFragment_to_signinFragment)
+            } else if (onBoardingFinished() && onSigninFinished() && !onPermissionFinished()) {
+                findNavController().navigate(R.id.action_splashFragment_to_storageFragment)
             } else {
                 findNavController().navigate(R.id.action_splashFragment_to_viewPagerFragment)
             }
@@ -42,6 +46,17 @@ class SplashFragment : Fragment() {
 
     private fun onBoardingFinished(): Boolean {
         val sharedPref = requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
+        return sharedPref.getBoolean("Finished", false)
+    }
+
+    private fun onSigninFinished(): Boolean {
+        val sharedPref = requireActivity().getSharedPreferences("onSignin", Context.MODE_PRIVATE)
+        return sharedPref.getBoolean("Finished", false)
+    }
+
+    private fun onPermissionFinished(): Boolean {
+        val sharedPref =
+            requireActivity().getSharedPreferences("onPermission", Context.MODE_PRIVATE)
         return sharedPref.getBoolean("Finished", false)
     }
 
