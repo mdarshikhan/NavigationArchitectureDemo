@@ -45,12 +45,13 @@ class LocationPermissionFragment : Fragment() {
 
         _binding?.btnFinish?.setOnClickListener {
             findNavController().navigate(R.id.action_viewPagerFragment_to_homeFragment)
-            onBoardingFinished()
+            onPermissionFinished()
         }
     }
 
-    private fun onBoardingFinished() {
-        val sharedPref = requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
+    private fun onPermissionFinished() {
+        val sharedPref =
+            requireActivity().getSharedPreferences("onPermission", Context.MODE_PRIVATE)
         val editor = sharedPref.edit()
         editor.putBoolean("Finished", true)
         editor.apply()
@@ -105,7 +106,7 @@ class LocationPermissionFragment : Fragment() {
 
     private fun updateUI() {
         // update ui.
-        findNavController().navigate(R.id.action_viewPagerFragment_to_homeFragment)
-        onBoardingFinished()
+        onPermissionFinished()
+        findNavController().navigate(R.id.action_locationFragment_to_homeFragment)
     }
 }

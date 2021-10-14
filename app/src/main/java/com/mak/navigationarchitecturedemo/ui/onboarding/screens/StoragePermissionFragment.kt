@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.mak.navigationarchitecturedemo.R
 import com.mak.navigationarchitecturedemo.databinding.FragmentStoragePermissionBinding
@@ -45,7 +46,8 @@ class StoragePermissionFragment : Fragment() {
         }
 
         _binding?.btnNext?.setOnClickListener {
-            viewPager?.currentItem = 4
+//            viewPager?.currentItem = 4
+            findNavController().navigate(R.id.action_storageFragment_to_locationFragment)
         }
     }
 
@@ -98,7 +100,8 @@ class StoragePermissionFragment : Fragment() {
 
     private fun updateUI() {
         // update ui.
-        viewPager?.currentItem = 4
+//        viewPager?.currentItem = 4
+        findNavController().navigate(R.id.action_storageFragment_to_locationFragment)
     }
 
 }

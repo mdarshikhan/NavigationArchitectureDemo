@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.mak.navigationarchitecturedemo.databinding.FragmentViewPagerBinding
-import com.mak.navigationarchitecturedemo.ui.onboarding.screens.*
+import com.mak.navigationarchitecturedemo.ui.onboarding.screens.FirstScreen
+import com.mak.navigationarchitecturedemo.ui.onboarding.screens.SecondScreen
+import com.mak.navigationarchitecturedemo.ui.onboarding.screens.ThirdScreen
 
 class ViewPagerFragment : Fragment() {
 
@@ -31,9 +33,9 @@ class ViewPagerFragment : Fragment() {
         val fragmentList = arrayListOf(
             FirstScreen(),
             SecondScreen(),
-            ThirdScreen(),
-            StoragePermissionFragment(),
-            LocationPermissionFragment()
+            ThirdScreen() //,
+//            StoragePermissionFragment(),
+//            LocationPermissionFragment()
         )
 
         val adapter = ViewPagerAdapter(

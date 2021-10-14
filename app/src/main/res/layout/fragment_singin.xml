@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AllMatch"
+    android:padding="@dimen/dp_16"
+    tools:context="com.mak.navigationarchitecturedemo.ui.auth.SigninFragment">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/logo_size"
+        android:layout_height="@dimen/logo_size"
+        android:layout_marginTop="@dimen/dp_50"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/auth" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/root_username"
+        style="@style/MatchWrap"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidth="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_username"
+            style="@style/MatchWrap"
+            android:hint="@string/username"
+            android:inputType="text"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="1dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/root_password"
+        style="@style/MatchWrap"
+        android:layout_marginTop="@dimen/dp_10"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidth="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/root_username">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_password"
+            style="@style/MatchWrap"
+            android:hint="@string/password"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_signin"
+        style="@style/AllWrap"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/signin"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/root_password" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_signup"
+        style="@style/AllWrap"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/signup"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/root_password" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
